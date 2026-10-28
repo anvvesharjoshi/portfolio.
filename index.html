@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anwesha Joshi | AI & Machine Learning Explorer | Cosmic Portfolio</title>
+  <meta name="description" content="Portfolio of Anwesha Joshi — Aspiring AI & Machine Learning Engineer navigating the frontiers of Deep Learning, Python, Java, CLI mastery, and Galactic Innovation.">
+  
+  <!-- Google Fonts: Space Grotesk, Orbitron, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="universe-body">
+  <!-- Custom Gravitational Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Space Canvas Background (Stars, Nebulas, Constellations) -->
+  <canvas id="universeCanvas" class="universe-canvas"></canvas>
+  <div class="nebula-overlay"></div>
+  <div class="space-grid-overlay"></div>
+
+  <!-- Interstellar Navigation Bar -->
+  <header class="cosmic-header" id="cosmicHeader">
+    <div class="header-container">
+      <a href="#hero" class="stellar-logo" aria-label="Anwesha Joshi Home">
+        <div class="logo-orbit">
+          <div class="logo-core"></div>
+          <div class="logo-satellite"></div>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">ANWESHA</span>
+          <span class="logo-tag">AI // ML</span>
+        </div>
+      </a>
+
+      <!-- Navigation Coordinates -->
+      <nav class="cosmic-nav" id="cosmicNav">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active"><span class="nav-coord">01.</span> Orbit</a></li>
+          <li><a href="#about" class="nav-link"><span class="nav-coord">02.</span> Odyssey</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-coord">03.</span> Constellations</a></li>
+          <li><a href="#missions" class="nav-link"><span class="nav-coord">04.</span> Missions</a></li>
+          <li><a href="#terminal" class="nav-link"><span class="nav-coord">05.</span> CLI Console</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-coord">06.</span> Transmission</a></li>
+        </ul>
+      </nav>
+
+      <!-- Space Station Control Widget -->
+      <div class="header-controls">
+        <!-- Warp Speed Button -->
+        <button id="warpToggleBtn" class="control-btn" title="Toggle Hyperspace Warp Mode" aria-label="Toggle Hyperspace Warp Speed">
+          <svg class="control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          </svg>
+          <span class="btn-text">WARP</span>
+        </button>
+
+        <!-- Ambient Cosmic Synth Audio Toggle -->
+        <button id="audioToggleBtn" class="control-btn audio-btn" title="Toggle Ambient Cosmic Synthesizer" aria-label="Toggle Cosmic Sound">
+          <span class="sound-wave">
+            <span></span><span></span><span></span><span></span>
+          </span>
+          <span class="audio-label">COSMOS AUDIO</span>
+        </button>
+
+        <!-- Mobile Nav Toggle -->
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO / SINGULARITY -->
+    <section id="hero" class="hero-section">
+      <div class="hero-cosmic-container">
+        
+        <!-- Telemetry Status Bar -->
+        <div class="telemetry-badge">
+          <span class="pulse-beacon"></span>
+          <span class="telemetry-text">NEURAL CORE ONLINE // SECTOR: ARTIFICIAL INTELLIGENCE & MACHINE LEARNING</span>
+        </div>
+
+        <!-- The Grand Creative Name Presentation -->
+        <div class="stellar-name-wrapper">
+          <!-- Multi-axis Orbiting Rings -->
+          <div class="orbital-ring ring-1">
+            <span class="orbit-satellite sat-python" title="Python">Py</span>
+          </div>
+          <div class="orbital-ring ring-2">
+            <span class="orbit-satellite sat-java" title="Java">☕</span>
+          </div>
+          <div class="orbital-ring ring-3">
+            <span class="orbit-satellite sat-ai" title="AI & ML">AI</span>
+          </div>
+
+          <!-- Starlight Glowing Name -->
+          <h1 class="stellar-name" data-text="ANWESHA JOSHI">
+            <span class="first-name">ANWESHA</span>
+            <span class="last-name">JOSHI</span>
+          </h1>
+
+          <div class="starlight-halo"></div>
+        </div>
+
+        <!-- Subtitle & Creative Cosmic Title -->
+        <div class="hero-role-container">
+          <div class="cosmic-role">
+            <span class="role-bracket">&lt;</span>
+            <span class="role-typing" id="roleTyping">Aspiring AI & Machine Learning Engineer</span>
+            <span class="role-cursor">|</span>
+            <span class="role-bracket">&gt;</span>
+          </div>
+          <p class="hero-manifesto">
+            Navigating high-dimensional data nebulas, engineering neural constellations, and translating raw computational gravity into intelligent learning machines.
+          </p>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-actions">
+          <a href="#skills" class="cosmic-btn primary-btn">
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-svg">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 2a10 10 0 0 1 10 10M12 22a10 10 0 0 1-10-10"/>
+              </svg>
+              Explore Constellations
+            </span>
+          </a>
+          <a href="#terminal" class="cosmic-btn secondary-btn">
+            <span class="btn-content">
+              <span class="terminal-prefix">&gt;_</span> Launch CLI Terminal
+            </span>
+          </a>
+          <a href="#contact" class="cosmic-btn ghost-btn">
+            <span class="btn-content">Transmit Signal</span>
+          </a>
+        </div>
+
+        <!-- Cosmic Telemetry Quick Dashboard -->
+        <div class="telemetry-strip">
+          <div class="telemetry-card">
+            <div class="telemetry-val">Python & Java</div>
+            <div class="telemetry-label">Dual Core Propulsion</div>
+          </div>
+          <div class="telemetry-card">
+            <div class="telemetry-val">Deep Learning</div>
+            <div class="telemetry-label">Trajectory & Vision</div>
+          </div>
+          <div class="telemetry-card">
+            <div class="telemetry-val">CLI & Git Flow</div>
+            <div class="telemetry-label">Terminal Navigation</div>
+          </div>
+          <div class="telemetry-card">
+            <div class="telemetry-val">Global Clarity</div>
+            <div class="telemetry-label">Professional Comms</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll down to About section">
+        <span class="scroll-label">DESCEND ORBIT</span>
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- SECTION 2: ABOUT / ODYSSEY -->
+    <section id="about" class="about-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-index">02 // MISSION LOG</div>
+          <h2 class="section-title">The Celestial Odyssey</h2>
+          <div class="section-subtitle">Bridging mathematical cosmos with artificial cognition</div>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Holographic Celestial Gyroscope Display -->
+          <div class="cosmic-avatar-card">
+            <div class="hologram-viewport">
+              <div class="gyro-ring gyro-outer"></div>
+              <div class="gyro-ring gyro-mid"></div>
+              <div class="gyro-ring gyro-inner"></div>
+              <div class="pulsar-core">
+                <div class="pulsar-flair"></div>
+                <div class="pulsar-node">AJ</div>
+              </div>
+              <div class="coordinate-marker top-left">LAT // 45.289° N</div>
+              <div class="coordinate-marker top-right">LONG // 122.394° W</div>
+              <div class="coordinate-marker bottom-left">PARAM // 1.75B</div>
+              <div class="coordinate-marker bottom-right">STATUS // CONVERGED</div>
+            </div>
+            
+            <div class="avatar-footer">
+              <div class="stellar-id">ANWESHA JOSHI // VOYAGER 01</div>
+              <div class="stellar-tag">Specialization: Machine Learning & Intelligent Systems</div>
+            </div>
+          </div>
+
+          <!-- Narrative and Aspirations in AI/ML -->
+          <div class="about-narrative">
+            <h3 class="narrative-heading">
+              "Just as astronomers decode signals from distant galaxies, I venture into deep neural spaces to discover intelligence in data."
+            </h3>
+
+            <p class="narrative-text">
+              I am <strong>Anwesha Joshi</strong>, a developer standing at the event horizon of <strong>Artificial Intelligence and Machine Learning</strong>. I believe that algorithms are modern alchemy — transforming raw multidimensional data points into systems that can see, reason, forecast, and augment human potential.
+            </p>
+
+            <p class="narrative-text">
+              My engineering philosophy revolves around three harmonic gravitational laws:
+            </p>
+
+            <div class="philosophy-cards">
+              <div class="philo-card">
+                <div class="philo-icon">🌌</div>
+                <div class="philo-content">
+                  <h4>Curiosity for Neural Frontiers</h4>
+                  <p>Relentlessly experimenting with model architectures, gradient optimization, transformers, and machine intelligence paradigms.</p>
+                </div>
+              </div>
+
+              <div class="philo-card">
+                <div class="philo-icon">⚡</div>
+                <div class="philo-content">
+                  <h4>Rigorous Software Engineering</h4>
+                  <p>Writing deterministic, clean, and battle-tested code in <strong>Python</strong> and <strong>Java</strong> with disciplined version control in <strong>Git</strong>.</p>
+                </div>
+              </div>
+
+              <div class="philo-card">
+                <div class="philo-icon">📡</div>
+                <div class="philo-content">
+                  <h4>Clear & Empathetic Communication</h4>
+                  <p>Distilling intricate algorithmic complexities into transparent narratives for researchers, cross-functional teams, and stakeholders.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stellar Stats Counter Strip -->
+            <div class="stats-row">
+              <div class="stat-box">
+                <div class="stat-number" data-target="100">0</div><span class="stat-suffix">%</span>
+                <div class="stat-desc">Commitment to AI Evolution</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number" data-target="2">0</div><span class="stat-suffix"></span>
+                <div class="stat-desc">Core Languages (Python & Java)</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number" data-target="1000">0</div><span class="stat-suffix">+</span>
+                <div class="stat-desc">CLI Shell Invocations</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number" data-target="99">0</div><span class="stat-suffix">.9%</span>
+                <div class="stat-desc">Clarity in Collaboration</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: SKILLS / CONSTELLATIONS -->
+    <section id="skills" class="skills-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-index">03 // GALACTIC MATRIX</div>
+          <h2 class="section-title">Orbital Skills & Constellations</h2>
+          <div class="section-subtitle">Core programming, development tooling, AI foundations & communication mastery</div>
+        </div>
+
+        <!-- Interactive Constellation Canvas Visualizer -->
+        <div class="constellation-visualizer-container">
+          <div class="visualizer-header">
+            <span class="vis-indicator"></span>
+            <span class="vis-title">NEURAL CONSTELLATION GRAPH // INTERACTIVE TOPOLOGY</span>
+            <span class="vis-hint">Hover or tap star nodes to illuminate connections</span>
+          </div>
+          <canvas id="constellationCanvas" class="constellation-canvas"></canvas>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="skills-filter-nav">
+          <button class="filter-btn active" data-filter="all">All Stars</button>
+          <button class="filter-btn" data-filter="languages">Programming (Python & Java)</button>
+          <button class="filter-btn" data-filter="ai-ml">AI & Machine Learning</button>
+          <button class="filter-btn" data-filter="dev-tools">DevOps & Terminal (CLI & Git)</button>
+          <button class="filter-btn" data-filter="interpersonal">Professional Communication</button>
+        </div>
+
+        <!-- Skills Cards Grid -->
+        <div class="skills-grid" id="skillsGrid">
+          
+          <!-- SKILL 1: PYTHON -->
+          <div class="skill-card" data-category="languages ai-ml">
+            <div class="card-glow"></div>
+            <div class="skill-header">
+              <div class="skill-icon-container python-icon">
+                <svg viewBox="0 0 24 24" class="skill-svg" fill="currentColor">
+                  <path d="M12 2c-3.14 0-5 1.54-5 4v2h5v1H5c-2.46 0-4 1.86-4 5s1.54 5 4 5h2v-2c0-2.46 1.86-4 5-4h5v-1h-5V6c0-2.46-1.86-4-5-4zm-2 2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4 7.5c2.46 0 4-1.86 4-5s-1.54-5-4-5h-2v2c0 2.46-1.86 4-5 4H4v1h5v2c0 2.46 1.86 4 5 4h5c3.14 0 5-1.54 5-4v-2h-5v-1h7zm0 7a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-tier">TIER: PRIMARY AI ENGINE</span>
+                <h3 class="skill-name">Python</h3>
+              </div>
+            </div>
+            <p class="skill-description">
+              The primary gravitational fuel for Artificial Intelligence and Machine Learning. Adept in crafting data processing pipelines, object-oriented systems, and neural network prototyping.
+            </p>
+            <div class="skill-constellation-items">
+              <span class="pill">NumPy & Pandas</span>
+              <span class="pill">PyTorch & TensorFlow</span>
+              <span class="pill">Scikit-Learn</span>
+              <span class="pill">Data Structures</span>
+              <span class="pill">OOP Architecture</span>
+            </div>
+            <div class="orbit-meter">
+              <div class="meter-bar" style="--level: 95%;"></div>
+              <span class="meter-text">Orbital Resonance: High</span>
+            </div>
+          </div>
+
+          <!-- SKILL 2: JAVA -->
+          <div class="skill-card" data-category="languages">
+            <div class="card-glow"></div>
+            <div class="skill-header">
+              <div class="skill-icon-container java-icon">
+                <svg viewBox="0 0 24 24" class="skill-svg" fill="currentColor">
+                  <path d="M8.85 16.82c0 .03-.02.05-.03.07-.4.65-1.42 1.25-2.6 1.25-.43 0-.82-.08-1.16-.24-.22-.1-.38-.25-.38-.45 0-.3.33-.56.88-.74.62-.2 1.48-.3 2.37-.3.26 0 .5.01.73.04.1.18.17.38.19.62zm1.22 1.77c-.45.38-1.1.62-1.92.68-.42.03-.84 0-1.25-.1-.36-.08-.6-.23-.6-.42 0-.25.32-.47.88-.63.53-.15 1.23-.23 1.99-.23.18 0 .37.01.55.02.13.23.25.46.35.68zm8.68-2.82c-.08-.03-.23-.05-.44-.05-1.07 0-2.47.38-3.46 1.05-.72.48-1.17 1.08-1.17 1.7 0 .8 1.05 1.53 2.62 1.53.53 0 1.05-.08 1.48-.25.35-.13.56-.3.56-.51 0-.32-.44-.65-1.22-.88-.71-.21-1.63-.33-2.52-.33-.31 0-.6.02-.85.05.08-.25.26-.5.5-.72.68-.62 1.83-.98 2.87-.98.39 0 .69.04.88.1.15.05.28.1.37.13.06-.21.05-.42-.03-.64zm-5.63-8.87c.18.5-.02 1.1-.39 1.72-.45.74-1.22 1.43-2.07 1.95-.57.35-1.12.59-1.57.7-.08-.43.03-.92.29-1.4.38-.72 1.06-1.46 1.92-2.05.6-.42 1.25-.74 1.74-.88.03-.01.06-.02.08-.04zm-1.89-4.9c-.31.62-.4 1.41-.17 2.25.33 1.22 1.28 2.39 2.52 3.23.49.33 1 .6 1.5.8.03-.38-.07-.81-.27-1.26-.35-.78-1-1.57-1.81-2.22-.62-.5-1.28-.86-1.77-.8zm5.79 9.87c-1.39-.77-3.05-1.22-4.81-1.22-1.2 0-2.35.21-3.38.59-.11-.3-.15-.62-.12-.93 1.07-.37 2.25-.57 3.5-.57 1.92 0 3.73.47 5.25 1.3.16.27.27.56.32.86-.25-.01-.5-.02-.76-.03z"/>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-tier">TIER: ENTERPRISE BEDROCK</span>
+                <h3 class="skill-name">Java</h3>
+              </div>
+            </div>
+            <p class="skill-description">
+              Robust, type-safe, and scalable enterprise architecture. Foundation in Object-Oriented Design, multithreading fundamentals, algorithm optimization, and clean architectural principles.
+            </p>
+            <div class="skill-constellation-items">
+              <span class="pill">Core Java & OOP</span>
+              <span class="pill">Collections Framework</span>
+              <span class="pill">Design Patterns</span>
+              <span class="pill">Multithreading Basics</span>
+              <span class="pill">JVM Internals</span>
+            </div>
+            <div class="orbit-meter">
+              <div class="meter-bar" style="--level: 90%;"></div>
+              <span class="meter-text">Orbital Resonance: Solid</span>
+            </div>
+          </div>
+
+          <!-- SKILL 3: CLI (COMMAND LINE INTERFACE) -->
+          <div class="skill-card" data-category="dev-tools">
+            <div class="card-glow"></div>
+            <div class="skill-header">
+              <div class="skill-icon-container cli-icon">
+                <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-tier">TIER: FLIGHT CONTROL</span>
+                <h3 class="skill-name">CLI Mastery</h3>
+              </div>
+            </div>
+            <p class="skill-description">
+              Command line agility for navigating system galaxies. Comfortable in Unix/Linux terminals, shell automation, environment configuration, remote compute operations, and pipeline orchestration.
+            </p>
+            <div class="skill-constellation-items">
+              <span class="pill">Bash / Zsh Navigation</span>
+              <span class="pill">Process Management</span>
+              <span class="pill">File System Manipulation</span>
+              <span class="pill">Shell Scripting</span>
+              <span class="pill">Vim / Nano</span>
+            </div>
+            <div class="orbit-meter">
+              <div class="meter-bar" style="--level: 92%;"></div>
+              <span class="meter-text">Orbital Resonance: Fluent</span>
+            </div>
+          </div>
+
+          <!-- SKILL 4: GIT & VERSION CONTROL -->
+          <div class="skill-card" data-category="dev-tools">
+            <div class="card-glow"></div>
+            <div class="skill-header">
+              <div class="skill-icon-container git-icon">
+                <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="18" cy="18" r="3"></circle>
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                  <line x1="6" y1="9" x2="6" y2="21"></line>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-tier">TIER: TIMELINE GOVERNANCE</span>
+                <h3 class="skill-name">Git & GitHub</h3>
+              </div>
+            </div>
+            <p class="skill-description">
+              Preserving code integrity across divergent development dimensions. Proficient in atomic commits, branch orchestration, pull requests, conflict resolution, and collaborative workflow hygiene.
+            </p>
+            <div class="skill-constellation-items">
+              <span class="pill">Branching & Merging</span>
+              <span class="pill">Rebase & Cherry-Pick</span>
+              <span class="pill">Pull Request Reviews</span>
+              <span class="pill">Collaborative GitFlow</span>
+              <span class="pill">Stashing & Workflows</span>
+            </div>
+            <div class="orbit-meter">
+              <div class="meter-bar" style="--level: 94%;"></div>
+              <span class="meter-text">Orbital Resonance: Dynamic</span>
+            </div>
+          </div>
+
+          <!-- SKILL 5: PROFESSIONAL COMMUNICATION -->
+          <div class="skill-card" data-category="interpersonal">
+            <div class="card-glow"></div>
+            <div class="skill-header">
+              <div class="skill-icon-container comms-icon">
+                <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <line x1="9" y1="10" x2="15" y2="10"></line>
+                  <line x1="12" y1="7" x2="12" y2="13"></line>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-tier">TIER: GALACTIC RELAY</span>
+                <h3 class="skill-name">Professional Communication</h3>
+              </div>
+            </div>
+            <p class="skill-description">
+              The interstellar bridge between pure algorithms and real-world impact. Skilled in articulating intricate technical concepts clearly, writing comprehensive documentation, active listening, and collaborative alignment.
+            </p>
+            <div class="skill-constellation-items">
+              <span class="pill">Technical Documentation</span>
+              <span class="pill">Cross-functional Dialogue</span>
+              <span class="pill">Active Listening</span>
+              <span class="pill">Project Presentations</span>
+              <span class="pill">Empathetic Teamwork</span>
+            </div>
+            <div class="orbit-meter">
+              <div class="meter-bar" style="--level: 96%;"></div>
+              <span class="meter-text">Orbital Resonance: Master</span>
+            </div>
+          </div>
+
+          <!-- SKILL 6: ARTIFICIAL INTELLIGENCE & MACHINE LEARNING -->
+          <div class="skill-card" data-category="ai-ml">
+            <div class="card-glow"></div>
+            <div class="skill-header">
+              <div class="skill-icon-container ai-icon">
+                <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-tier">TIER: FUTURE HORIZON</span>
+                <h3 class="skill-name">AI & Machine Learning</h3>
+              </div>
+            </div>
+            <p class="skill-description">
+              Theoretical intuition and practical curiosity in artificial cognition. Studying Supervised & Unsupervised Learning, Neural Network architectures, loss surfaces, feature engineering, and predictive modeling.
+            </p>
+            <div class="skill-constellation-items">
+              <span class="pill">Supervised Learning</span>
+              <span class="pill">Deep Neural Networks</span>
+              <span class="pill">Computer Vision Basics</span>
+              <span class="pill">Model Evaluation (ROC/AUC)</span>
+              <span class="pill">Data Preprocessing</span>
+            </div>
+            <div class="orbit-meter">
+              <div class="meter-bar" style="--level: 88%;"></div>
+              <span class="meter-text">Orbital Resonance: Expanding</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: MISSIONS / PROJECTS -->
+    <section id="missions" class="missions-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-index">04 // EXPLORATION FLEET</div>
+          <h2 class="section-title">Galactic Missions & AI Endeavors</h2>
+          <div class="section-subtitle">Showcasing real-world architecture in Python, Java, Machine Learning, and CLI workflows</div>
+        </div>
+
+        <div class="missions-grid">
+          
+          <!-- MISSION 1: CosmicVision AI -->
+          <article class="mission-card">
+            <div class="mission-preview">
+              <div class="mission-hud">
+                <span class="hud-tag">MISSION 01 // DEEP VISION</span>
+                <span class="hud-status status-active">ACTIVE TRAJECTORY</span>
+              </div>
+              <div class="interactive-simulation sim-vision" id="simVision">
+                <div class="sim-scanline"></div>
+                <div class="target-reticle"></div>
+                <div class="sim-data-overlay">
+                  <div>DETECT: SPIRAL_GALAXY_CLASSIFIER</div>
+                  <div>CONFIDENCE: 98.7%</div>
+                  <div>EPOCH: 45 / 50 [LOSS: 0.014]</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mission-body">
+              <h3 class="mission-title">CosmicVision: Deep Sky Astronomical Classifier</h3>
+              <p class="mission-desc">
+                An image classification engine leveraging Convolutional Neural Networks (CNNs) in Python to categorize astronomical telescope imagery into morphological galaxy types with high precision.
+              </p>
+              
+              <div class="mission-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PyTorch / Keras</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">CLI</span>
+              </div>
+
+              <div class="mission-links">
+                <button class="mission-action-btn run-sim-btn" data-sim="vision">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mini-svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  Inspect Simulation
+                </button>
+                <a href="#contact" class="mission-action-btn secondary-action">
+                  Inquire Specs
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- MISSION 2: NeuroPulsar AI -->
+          <article class="mission-card">
+            <div class="mission-preview">
+              <div class="mission-hud">
+                <span class="hud-tag">MISSION 02 // REINFORCEMENT LEARNING</span>
+                <span class="hud-status status-active">TESTING HARNESS</span>
+              </div>
+              <div class="interactive-simulation sim-agent" id="simAgent">
+                <div class="sim-particle-field"></div>
+                <div class="orbiting-drone"></div>
+                <div class="sim-data-overlay">
+                  <div>AGENT: DEEP_Q_NAVIGATOR</div>
+                  <div>REWARD: +3,480.5</div>
+                  <div>EPSILON: 0.05 [EXPLOIT]</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mission-body">
+              <h3 class="mission-title">NeuroPulsar: Autonomous Celestial Pathfinding Agent</h3>
+              <p class="mission-desc">
+                A reinforcement learning agent developed in Python designed to navigate dynamic cosmic debris fields and gravity wells using Deep Q-Networks (DQN) with real-time state space discretization.
+              </p>
+              
+              <div class="mission-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Reinforcement Learning</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">CLI Automation</span>
+              </div>
+
+              <div class="mission-links">
+                <button class="mission-action-btn run-sim-btn" data-sim="agent">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mini-svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  Run Agent Pulse
+                </button>
+                <a href="#contact" class="mission-action-btn secondary-action">
+                  View Architecture
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- MISSION 3: TitanStream Java Pipeline -->
+          <article class="mission-card">
+            <div class="mission-preview">
+              <div class="mission-hud">
+                <span class="hud-tag">MISSION 03 // ENTERPRISE DATA ENGINE</span>
+                <span class="hud-status status-deployed">DEPLOYED SYSTEM</span>
+              </div>
+              <div class="interactive-simulation sim-pipeline" id="simPipeline">
+                <div class="pipeline-streams">
+                  <span class="stream stream-1"></span>
+                  <span class="stream stream-2"></span>
+                  <span class="stream stream-3"></span>
+                </div>
+                <div class="sim-data-overlay">
+                  <div>PIPELINE: JAVA_CONCURRENCY_HUB</div>
+                  <div>THROUGHPUT: 45,000 evt/sec</div>
+                  <div>MEMORY: 128MB GC_STABLE</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mission-body">
+              <h3 class="mission-title">TitanStream: High-Throughput Java Telemetry Core</h3>
+              <p class="mission-desc">
+                A robust, multi-threaded data ingestion and preprocessing pipeline engineered in Java. Built with defensive programming, clean object-oriented architecture, and strict memory limits.
+              </p>
+              
+              <div class="mission-tech-stack">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Multithreading</span>
+                <span class="tech-tag">Design Patterns</span>
+                <span class="tech-tag">CLI Integration</span>
+                <span class="tech-tag">Git Flow</span>
+              </div>
+
+              <div class="mission-links">
+                <button class="mission-action-btn run-sim-btn" data-sim="pipeline">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mini-svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  Benchmark Stream
+                </button>
+                <a href="#contact" class="mission-action-btn secondary-action">
+                  Examine Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- MISSION 4: NebulaComms AI -->
+          <article class="mission-card">
+            <div class="mission-preview">
+              <div class="mission-hud">
+                <span class="hud-tag">MISSION 04 // NLP & AGENTIC CHAT</span>
+                <span class="hud-status status-active">RESEARCH STAGE</span>
+              </div>
+              <div class="interactive-simulation sim-nlp" id="simNlp">
+                <div class="token-flow">
+                  <span class="token">Attention</span>
+                  <span class="token">Embedding</span>
+                  <span class="token">Logits</span>
+                </div>
+                <div class="sim-data-overlay">
+                  <div>MODEL: TRANSFORMER_REASONER</div>
+                  <div>LATENCY: 18ms</div>
+                  <div>PERPLEXITY: 3.12</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mission-body">
+              <h3 class="mission-title">NebulaComms: Multi-Turn Neural Assistant</h3>
+              <p class="mission-desc">
+                An intelligent conversational agent incorporating contextual memory and structured prompt reasoning to assist developers with terminal troubleshooting and Git reconciliation.
+              </p>
+              
+              <div class="mission-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Transformers</span>
+                <span class="tech-tag">Professional Communication</span>
+                <span class="tech-tag">Git</span>
+              </div>
+
+              <div class="mission-links">
+                <button class="mission-action-btn run-sim-btn" data-sim="nlp">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mini-svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  Simulate Query
+                </button>
+                <a href="#contact" class="mission-action-btn secondary-action">
+                  Transmission Details
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE CLI TERMINAL -->
+    <section id="terminal" class="terminal-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-index">05 // FLIGHT DECK CONSOLE</div>
+          <h2 class="section-title">Anwesha's Interactive CLI Console</h2>
+          <div class="section-subtitle">Real-time terminal simulation showcasing CLI mastery and system agility</div>
+        </div>
+
+        <div class="terminal-window">
+          
+          <!-- Terminal Header Bar -->
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title">
+              <svg viewBox="0 0 24 24" class="term-svg" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+              anwesha@cosmic-core: ~/portfolio (main)
+            </div>
+            <div class="terminal-actions">
+              <button id="clearTerminalBtn" class="term-action-btn" title="Clear terminal screen">clear</button>
+            </div>
+          </div>
+
+          <!-- Terminal Output Area -->
+          <div class="terminal-body" id="terminalBody">
+            <div class="term-line term-welcome">
+              <span class="term-highlight">========================================================</span>
+              <br>
+              <span class="term-bold">🌌 WELCOME TO THE ANWESHA JOSHI FLIGHT CONTROL TERMINAL v2.6</span>
+              <br>
+              Type <span class="term-command">'help'</span> to view available cosmic directives.
+              <br>
+              <span class="term-highlight">========================================================</span>
+            </div>
+          </div>
+
+          <!-- Terminal Input Prompt -->
+          <div class="terminal-prompt-row">
+            <span class="prompt-user">anwesha</span><span class="prompt-at">@</span><span class="prompt-host">cosmos</span><span class="prompt-path">:~$</span>
+            <input type="text" id="terminalInput" class="terminal-input" placeholder="type 'help', 'skills', 'ai', 'warp'..." autocomplete="off" spellcheck="false">
+          </div>
+
+          <!-- Fast Command Chips -->
+          <div class="terminal-quick-chips">
+            <span class="chip-label">Quick Commands:</span>
+            <button class="term-chip" data-cmd="help">help</button>
+            <button class="term-chip" data-cmd="whoami">whoami</button>
+            <button class="term-chip" data-cmd="skills">skills</button>
+            <button class="term-chip" data-cmd="ai">ai</button>
+            <button class="term-chip" data-cmd="python">python</button>
+            <button class="term-chip" data-cmd="java">java</button>
+            <button class="term-chip" data-cmd="git">git</button>
+            <button class="term-chip" data-cmd="warp">warp</button>
+            <button class="term-chip" data-cmd="contact">contact</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT & TRANSMISSION -->
+    <section id="contact" class="contact-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-index">06 // SUBSPACE FREQUENCY</div>
+          <h2 class="section-title">Initiate Interstellar Transmission</h2>
+          <div class="section-subtitle">Reach out for AI/ML collaborations, engineering discussions, or team opportunities</div>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Transmission Terminal Form -->
+          <div class="transmission-form-container">
+            <div class="form-header">
+              <div class="status-indicator">
+                <span class="pulse-beacon"></span>
+                <span>TRANSCEIVER READY // ENCRYPTION: QUANTUM</span>
+              </div>
+              <div class="frequency-indicator">FREQ: 1420.405 MHz (Hydrogen Line)</div>
+            </div>
+
+            <form id="transmissionForm" class="transmission-form" novalidate>
+              
+              <div class="form-group">
+                <label for="senderName" class="form-label">
+                  <span class="label-prefix">&gt;</span> TRANSMITTER CALL-SIGN (NAME)
+                </label>
+                <input type="text" id="senderName" name="name" class="cosmic-input" placeholder="Dr. Jane Doe / Voyager" required>
+                <div class="input-glow"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">
+                  <span class="label-prefix">&gt;</span> SUBSPACE FREQUENCY (EMAIL)
+                </label>
+                <input type="email" id="senderEmail" name="email" class="cosmic-input" placeholder="commander@institute.org" required>
+                <div class="input-glow"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="transmissionTopic" class="form-label">
+                  <span class="label-prefix">&gt;</span> TRANSMISSION VECTOR (TOPIC)
+                </label>
+                <select id="transmissionTopic" name="topic" class="cosmic-input select-input">
+                  <option value="ai-ml">AI & Machine Learning Research / Project</option>
+                  <option value="opportunity">Full-Time / Internship Opportunity</option>
+                  <option value="code-review">Python / Java Architecture Collaboration</option>
+                  <option value="general">Open Subspace Greeting</option>
+                </select>
+                <div class="input-glow"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">
+                  <span class="label-prefix">&gt;</span> TRANSMISSION PAYLOAD (MESSAGE)
+                </label>
+                <textarea id="senderMessage" name="message" class="cosmic-input textarea-input" rows="5" placeholder="State your mission parameters, proposal, or inquiry..." required></textarea>
+                <div class="input-glow"></div>
+              </div>
+
+              <button type="submit" class="cosmic-btn primary-btn submit-btn" id="sendTransmissionBtn">
+                <span class="btn-glow"></span>
+                <span class="btn-content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-svg">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  Dispatch Transmission
+                </span>
+              </button>
+
+            </form>
+
+            <!-- Success Transmission Modal/Notice -->
+            <div class="transmission-ack" id="transmissionAck">
+              <div class="ack-icon">🚀</div>
+              <div class="ack-title">TRANSMISSION DISPATCHED TO DEEP SPACE</div>
+              <p class="ack-desc">Packet received by Anwesha Joshi. Subspace acknowledgment will be routed back to your terminal shortly.</p>
+              <button class="term-chip" id="resetFormBtn">Send Another Packet</button>
+            </div>
+
+          </div>
+
+          <!-- Deep Space Coordinates & Direct Contact Channels -->
+          <div class="contact-channels">
+            
+            <div class="channel-card">
+              <div class="channel-icon">📫</div>
+              <div class="channel-info">
+                <div class="channel-label">DIRECT SUBSPACE CHANNEL</div>
+                <div class="channel-value">anweshajoshi.connect@gmail.com</div>
+              </div>
+              <button class="copy-btn" id="copyEmailBtn" data-email="anweshajoshi.connect@gmail.com" title="Copy email address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mini-svg">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-text">Copy</span>
+              </button>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">💻</div>
+              <div class="channel-info">
+                <div class="channel-label">CODE REPOSITORY REGISTRY</div>
+                <div class="channel-value">github.com/anweshajoshi</div>
+              </div>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-arrow-btn">
+                <span>Orbit</span> →
+              </a>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">🌐</div>
+              <div class="channel-info">
+                <div class="channel-label">INTERSTELLAR NETWORK</div>
+                <div class="channel-value">linkedin.com/in/anwesha-joshi</div>
+              </div>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="link-arrow-btn">
+                <span>Connect</span> →
+              </a>
+            </div>
+
+            <!-- Stellar Transmission Telemetry Box -->
+            <div class="telemetry-box">
+              <div class="box-title">CURRENT FLIGHT TELEMETRY</div>
+              <div class="telemetry-item">
+                <span>PILOT:</span> <strong>Anwesha Joshi</strong>
+              </div>
+              <div class="telemetry-item">
+                <span>ASPIRATION:</span> <strong>AI & Machine Learning Pioneer</strong>
+              </div>
+              <div class="telemetry-item">
+                <span>CORE STACK:</span> <strong>Python, Java, Git, CLI</strong>
+              </div>
+              <div class="telemetry-item">
+                <span>COMMUNICATION:</span> <strong>Empathetic & Rigorous</strong>
+              </div>
+              <div class="telemetry-item">
+                <span>PING TO CORE:</span> <strong id="pingVal">14 ms</strong>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Cosmic Footer -->
+  <footer class="cosmic-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">ANWESHA JOSHI</div>
+        <div class="footer-tagline">Architecting intelligent frontiers in the AI & ML cosmos.</div>
+      </div>
+
+      <div class="footer-center">
+        <div class="starlight-quote">
+          "The cosmos is within us. We are made of star-stuff. We are a way for the cosmos to know itself."
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-year">STARDATE © 2026 // ALL CODES SECURED</div>
+        <div class="footer-links">
+          <a href="#hero">Ascend Orbit</a>
+          <span class="sep">/</span>
+          <a href="#terminal">Terminal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
